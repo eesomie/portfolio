@@ -1,16 +1,8 @@
-@font-face{
-    font-family: "DIN";
-    src: url("/Assets/Fonts/DIN-Bold.ttf");
-}
-@font-face{
-    font-family: "Courier";
-    src: url("/Assets/Fonts/cour.ttf");
-}
-
 html{
     padding: 0;
     margin: 0;
     background-color: #e832a1;
+    font-family: Arial;
 }
 body{
     padding: 0;
@@ -35,12 +27,10 @@ img{
 h1{
     margin: 0;
     padding-left: 75px;
-    font-family: "DIN";
 }
 h2{
     margin: 0;
     padding-left: 75px;
-    font-family: "Courier";
 }
 .pink{
     margin: 0;

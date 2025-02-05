@@ -72,6 +72,7 @@ h2{
 
 #main{
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
 }
@@ -83,8 +84,34 @@ h2{
     background-color: #ffffff;
     border-radius: 50px;
 }
-.border{
+#scrolable{
+    margin: 35px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 79vw;;
+    background-color: #ffffff;
+    border-radius: 50px;
 
+}
+#scrolable button{
+    width: 75px;
+    height: 75px;
+    border-radius: 35px;
+    background-color: #ffffff;
+    border: solid 3px #e832a1;
+    color: #ce2b90;
+    font-size: xx-large;
+    font-weight: bolder;
+    margin: 100px;
+}
+#scrolable button:active{
+    background-color: #a54498;
+    border: solid 3px #781953;
+    color: #661848;
+}
+
+.border{
     margin: 20px auto;
     padding: 15px;
     width:  25vw;
@@ -110,4 +137,15 @@ h2{
     height: 25vw;
     border-radius: 10px;
     border: solid #ffd0e7;
+}
+.border.left{
+    transform: scale(75%) translate(-60px);
+    z-index: 0;
+}
+.border.right{
+    transform: scale(75%) translate(60px);
+    z-index: 0;
+}
+.border.focus{
+    z-index: 1;
 }

@@ -96,24 +96,47 @@ h2{
 
 }
 .scrolable button{
-    width: 75px;
+    width: 200px;
     height: 75px;
-    border-radius: 35px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 40px;
     background-color: #ffffff;
     border: solid 3px #e832a1;
     color: #ce2b90;
-    font-size: xx-large;
+    font-size: 50px;
     font-weight: bolder;
     margin: 100px;
 }
-.scrolable button:hover{
-    transform: scale(125%);
+.scrolable button span{
+    transform: translateY(-5px);
+}
+.scrolable button.right{
+    transform: rotate(270deg);
+}
+.scrolable button.right:hover{
+    transform: scale(125%) rotate(270deg);
     z-index: 1;
     transition-timing-function: ease-out;
     transition: all 0.25s;
 }
-.scrolable button:not(:hover){
-    transform: scale(100%);
+.scrolable button.right:not(:hover){
+    transform: scaleX(100%) rotate(270deg);
+    transition-timing-function: ease-out;
+    transition: all 0.125s;
+}
+.scrolable button.left{
+    transform: scaleX(-100%) rotate(-90deg);
+}
+.scrolable button.left:hover{
+    transform: scaleX(-125%) scaleY(125%) rotate(-90deg);
+    z-index: 1;
+    transition-timing-function: ease-out;
+    transition: all 0.25s;
+}
+.scrolable button.left:not(:hover){
+    transform: scaleX(-100%) rotate(-90deg);
     transition-timing-function: ease-out;
     transition: all 0.125s;
 }
@@ -122,6 +145,7 @@ h2{
     border: solid 3px #781953;
     color: #661848;
 }
+
 
 .border{
     margin: 20px auto;

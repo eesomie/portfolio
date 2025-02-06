@@ -11,7 +11,6 @@ fetch("assets.json")
         const newImg = document.createElement("img");
         newImg.setAttribute("src", imgFile);
         newImg.setAttribute("alt", imgFile);
-        newImg.setAttribute("loading", "lazy");
         border.appendChild(newImg);
         section.appendChild(border);
     })
@@ -40,9 +39,6 @@ fetch("characterConcepts.json")
 
     function setImages(index){
 
-        leftBorder.innerHTML = "";
-        mainBorder.innerHTML = "";
-        rightBorder.innerHTML = "";
 
         if(index==0){
         var leftImgFile = "Assets/Art/"+data[data.length-1];
@@ -53,14 +49,12 @@ fetch("characterConcepts.json")
         const leftImg = document.createElement("img");
         leftImg.setAttribute("src", leftImgFile);
         leftImg.setAttribute("alt", leftImgFile);
-        leftImg.setAttribute("loading", "lazy");
         leftBorder.appendChild(leftImg);
 
         var mainImgFile = "Assets/Art/"+data[index];
         const mainImg = document.createElement("img");
         mainImg.setAttribute("src", mainImgFile);
         mainImg.setAttribute("alt", mainImgFile);
-        mainImg.setAttribute("loading", "lazy");
         mainBorder.appendChild(mainImg);
 
         if(index==data.length-1){
@@ -72,7 +66,6 @@ fetch("characterConcepts.json")
         const rightImg = document.createElement("img");
         rightImg.setAttribute("src", rightImgFile);
         rightImg.setAttribute("alt", rightImgFile);
-        rightImg.setAttribute("loading", "lazy");
         rightBorder.appendChild(rightImg);
 
         mainBorder.href="view.html?img="+data[index]; 
@@ -96,7 +89,10 @@ fetch("characterConcepts.json")
         console.log("index = "+index);
         console.log("img = "+data[index]);
     });
-    leftbutton.appendChild(document.createTextNode("<<"));
+    const leftSpan = document.createElement("span");
+    leftSpan.innerText = "♥︎";
+    leftbutton.appendChild(leftSpan);
+    leftbutton.classList.add("left");
 
     const rightbutton = document.createElement("button");
     rightbutton.setAttribute("type", "button");
@@ -113,7 +109,10 @@ fetch("characterConcepts.json")
         console.log("index = "+index);
         console.log("img = "+data[index]);
     });
-     rightbutton.appendChild(document.createTextNode(">>"));
+    const rightSpan = document.createElement("span");
+    rightSpan.innerText = "♥︎";
+    rightbutton.appendChild(rightSpan);
+     rightbutton.classList.add("right");
 
 
     section.appendChild(leftbutton);
@@ -196,7 +195,10 @@ fetch("environmentConcepts.json")
         console.log("index = "+index);
         console.log("img = "+data[index]);
     });
-    leftbutton.appendChild(document.createTextNode("<<"));
+    const leftSpan = document.createElement("span");
+    leftSpan.innerText = "♥︎";
+    leftbutton.appendChild(leftSpan);
+    leftbutton.classList.add("left");
 
     const rightbutton = document.createElement("button");
     rightbutton.setAttribute("type", "button");
@@ -213,7 +215,10 @@ fetch("environmentConcepts.json")
         console.log("index = "+index);
         console.log("img = "+data[index]);
     });
-     rightbutton.appendChild(document.createTextNode(">>"));
+    const rightSpan = document.createElement("span");
+    rightSpan.innerText = "♥︎";
+    rightbutton.appendChild(rightSpan);
+     rightbutton.classList.add("right");
 
 
     section.appendChild(leftbutton);

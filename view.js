@@ -7,7 +7,7 @@ if (imageName) {
     const img = document.createElement("img");
     const border = document.createElement("div")
     border.classList.add("FSborder")
-    img.src = "./Assets/Art/"+imageName;
+    img.src = "portfolio//Assets/Art/"+imageName;
     border.appendChild(img)
     section.appendChild(border);
 } else {

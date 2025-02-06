@@ -40,6 +40,9 @@ fetch("characterConcepts.json")
 
     function setImages(index){
 
+        leftBorder.innerHTML = "";
+        mainBorder.innerHTML = "";
+        rightBorder.innerHTML = "";
 
         if(index==0){
         var leftImgFile = "Assets/Art/"+data[data.length-1];

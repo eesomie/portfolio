@@ -36,7 +36,7 @@ h2{
 }
 #links {
     display: flex;
-    gap: 10px;
+    gap: 60px;
 }
 #links div {
     display: inline-block;

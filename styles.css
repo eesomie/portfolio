@@ -34,10 +34,12 @@ h2{
     padding-left: 75px;
     font-family: 'Courier New', Courier, monospace;
 }
-#links{
+#links {
     display: flex;
-    align-items: center;
-    justify-content: center;
+    gap: 10px;
+}
+#links div {
+    display: inline-block;
 }
 .pink{
     margin: 0;

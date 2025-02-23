@@ -7,7 +7,7 @@ fetch("assets.json")
         const border = document.createElement("a");
         border.href="view.html?img="+item;
         border.classList.add("border");
-        const imgFile = "Assets/Art/"+item;
+        const imgFile = "Assets/Thumbnails/"+item;
         const newImg = document.createElement("img");
         newImg.setAttribute("src", imgFile);
         newImg.setAttribute("alt", imgFile);
@@ -41,27 +41,27 @@ fetch("characterConcepts.json")
 
 
         if(index==0){
-        var leftImgFile = "Assets/Art/"+data[data.length-1];
+        var leftImgFile = "Assets/Thumbnails/"+data[data.length-1];
         }
         else{
-            var leftImgFile = "Assets/Art/"+data[index-1];
+            var leftImgFile = "Assets/Thumbnails/"+data[index-1];
         }
         const leftImg = document.createElement("img");
         leftImg.setAttribute("src", leftImgFile);
         leftImg.setAttribute("alt", leftImgFile);
         leftBorder.appendChild(leftImg);
 
-        var mainImgFile = "Assets/Art/"+data[index];
+        var mainImgFile = "Assets/Thumbnails/"+data[index];
         const mainImg = document.createElement("img");
         mainImg.setAttribute("src", mainImgFile);
         mainImg.setAttribute("alt", mainImgFile);
         mainBorder.appendChild(mainImg);
 
         if(index==data.length-1){
-            var rightImgFile = "Assets/Art/"+data[0];
+            var rightImgFile = "Assets/Thumbnails/"+data[0];
         }
         else{
-            var rightImgFile = "Assets/Art/"+data[index+1];
+            var rightImgFile = "Assets/Thumbnails/"+data[index+1];
         }
         const rightImg = document.createElement("img");
         rightImg.setAttribute("src", rightImgFile);
@@ -147,27 +147,27 @@ fetch("environmentConcepts.json")
 
 
         if(index==0){
-        var leftImgFile = "Assets/Art/"+data[data.length-1];
+        var leftImgFile = "Assets/Thumbnails/"+data[data.length-1];
         }
         else{
-            var leftImgFile = "Assets/Art/"+data[index-1];
+            var leftImgFile = "Assets/Thumbnails/"+data[index-1];
         }
         const leftImg = document.createElement("img");
         leftImg.setAttribute("src", leftImgFile);
         leftImg.setAttribute("alt", leftImgFile);
         leftBorder.appendChild(leftImg);
 
-        var mainImgFile = "Assets/Art/"+data[index];
+        var mainImgFile = "Assets/Thumbnails/"+data[index];
         const mainImg = document.createElement("img");
         mainImg.setAttribute("src", mainImgFile);
         mainImg.setAttribute("alt", mainImgFile);
         mainBorder.appendChild(mainImg);
 
         if(index==data.length-1){
-            var rightImgFile = "Assets/Art/"+data[0];
+            var rightImgFile = "Assets/Thumbnails/"+data[0];
         }
         else{
-            var rightImgFile = "Assets/Art/"+data[index+1];
+            var rightImgFile = "Assets/Thumbnails/"+data[index+1];
         }
         const rightImg = document.createElement("img");
         rightImg.setAttribute("src", rightImgFile);

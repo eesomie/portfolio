@@ -34,6 +34,11 @@ h2{
     padding-left: 75px;
     font-family: 'Courier New', Courier, monospace;
 }
+#links{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
 .pink{
     margin: 0;
     background-color: #e832a1;

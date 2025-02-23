@@ -37,9 +37,11 @@ h2{
 #links {
     display: flex;
     gap: 60px;
+    left: 90vw;
 }
 #links div {
     display: inline-block;
+    transform: scale(75%);
 }
 .pink{
     margin: 0;

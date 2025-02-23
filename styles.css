@@ -36,8 +36,7 @@ h2{
 }
 #links {
     position: absolute;
-    top: 25px;
-    right: 0;
+    top: 35px;
     display: flex;
     gap: 60px;
     left: 90vw;

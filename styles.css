@@ -39,7 +39,7 @@ h2{
     top: 35px;
     display: flex;
     gap: 60px;
-    left: 90vw;
+    right: 10px;
 }
 #links div {
     display: inline-block;

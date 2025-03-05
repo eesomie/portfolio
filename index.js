@@ -1,3 +1,11 @@
+window.onload = ()=>{
+    const header = document.querySelector(".loading");
+    header.classList.remove("loading");
+    const loadscreen = document.querySelector(".loader");
+    loadscreen.remove();
+    console.log("loaded");
+}
+
 fetch("assets.json")
 .then(response=>response.json())
 .then(data=>{

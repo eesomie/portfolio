@@ -1,25 +1,35 @@
 window.onload = function() {
     let images = document.querySelectorAll("img");
     let imagesLoaded = 0;
+    
+    // Function to check if all images are rendered
+    function checkImagesRendered() {
+        let imagesToCheck = images.length;
+        let renderedCount = 0;
 
-    // Check if all images are loaded
-    images.forEach((img) => {
-        if (img.complete) {
-            imagesLoaded++;
+        // Check if images have been rendered
+        images.forEach((img) => {
+            if (img.naturalWidth > 0 && img.naturalHeight > 0) {
+                renderedCount++;
+            } else {
+                img.onload = () => {
+                    if (img.naturalWidth > 0 && img.naturalHeight > 0) {
+                        renderedCount++;
+                    }
+                };
+            }
+        });
+
+        if (renderedCount === imagesToCheck) {
+            removeLoader();
         } else {
-            img.onload = () => {
-                imagesLoaded++;
-                if (imagesLoaded === images.length) {
-                    removeLoader();
-                }
-            };
+            // If not all images are rendered, check again
+            requestAnimationFrame(checkImagesRendered);
         }
-    });
-
-    // If images are already loaded, immediately remove loader
-    if (imagesLoaded === images.length) {
-        removeLoader();
     }
+
+    // Trigger the check
+    checkImagesRendered();
 };
 
 function removeLoader() {
@@ -29,8 +39,9 @@ function removeLoader() {
     const loadscreen = document.querySelector(".loader");
     if (loadscreen) loadscreen.remove();
 
-    console.log("All images and content fully loaded");
+    console.log("Images and content fully rendered");
 }
+
 
 
 fetch("assets.json")

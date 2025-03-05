@@ -76,7 +76,7 @@ h2{
 #textbox p{
     padding: 0 50px;
     font-family: 'Courier New', Courier, monospace;
-    color: #ce2b90;
+    color: #ffabd5;
     font-size: large;
 }
 
@@ -115,7 +115,7 @@ h2{
     border-radius: 40px;
     background-color: #ffffff;
     border: solid 3px #ffabd5;
-    color: #ce2b90;
+    color: #ffabd5;
     font-size: 50px;
     font-weight: bolder;
     margin: 100px;

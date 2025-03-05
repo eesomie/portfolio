@@ -1,37 +1,3 @@
-window.onload = function() {
-    let images = document.querySelectorAll("img");
-    let imagesLoaded = 0;
-    
-    // Function to check if all images are rendered
-    function checkImagesRendered() {
-        let imagesToCheck = images.length;
-        let renderedCount = 0;
-
-        // Check if images have been rendered
-        images.forEach((img) => {
-            if (img.naturalWidth > 0 && img.naturalHeight > 0) {
-                renderedCount++;
-            } else {
-                img.onload = () => {
-                    if (img.naturalWidth > 0 && img.naturalHeight > 0) {
-                        renderedCount++;
-                    }
-                };
-            }
-        });
-
-        if (renderedCount === imagesToCheck) {
-            removeLoader();
-        } else {
-            // If not all images are rendered, check again
-            requestAnimationFrame(checkImagesRendered);
-        }
-    }
-
-    // Trigger the check
-    checkImagesRendered();
-};
-
 function removeLoader() {
     const header = document.querySelector(".loading");
     if (header) header.classList.remove("loading");

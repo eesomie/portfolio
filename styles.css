@@ -152,9 +152,9 @@ h2{
     transition: all 0.125s;
 }
 .scrolable button:active{
-    background-color: #a54498;
-    border: solid 3px #781953;
-    color: #661848;
+    background-color: #e67cb1;
+    border: solid 3px #c95c93;
+    color: #c95c93;
 }
 
 

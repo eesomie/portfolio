@@ -1,10 +1,35 @@
-window.onload = ()=>{
+window.onload = function () {
+    let images = document.querySelectorAll("img");
+    let loadedCount = 0;
+    
+    images.forEach(img => {
+        if (img.complete) {
+            loadedCount++;
+        } else {
+            img.onload = () => {
+                loadedCount++;
+                if (loadedCount === images.length) {
+                    finalizeLoading();
+                }
+            };
+        }
+    });
+
+    if (loadedCount === images.length) {
+        finalizeLoading();
+    }
+};
+
+function finalizeLoading() {
     const header = document.querySelector(".loading");
-    header.classList.remove("loading");
+    if (header) header.classList.remove("loading");
+
     const loadscreen = document.querySelector(".loader");
-    loadscreen.remove();
-    console.log("loaded");
+    if (loadscreen) loadscreen.remove();
+
+    console.log("Fully loaded including images");
 }
+
 
 fetch("assets.json")
 .then(response=>response.json())

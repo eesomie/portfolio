@@ -1,33 +1,35 @@
-window.onload = function () {
+window.onload = function() {
     let images = document.querySelectorAll("img");
-    let loadedCount = 0;
-    
-    images.forEach(img => {
+    let imagesLoaded = 0;
+
+    // Check if all images are loaded
+    images.forEach((img) => {
         if (img.complete) {
-            loadedCount++;
+            imagesLoaded++;
         } else {
             img.onload = () => {
-                loadedCount++;
-                if (loadedCount === images.length) {
-                    finalizeLoading();
+                imagesLoaded++;
+                if (imagesLoaded === images.length) {
+                    removeLoader();
                 }
             };
         }
     });
 
-    if (loadedCount === images.length) {
-        finalizeLoading();
+    // If images are already loaded, immediately remove loader
+    if (imagesLoaded === images.length) {
+        removeLoader();
     }
 };
 
-function finalizeLoading() {
+function removeLoader() {
     const header = document.querySelector(".loading");
     if (header) header.classList.remove("loading");
 
     const loadscreen = document.querySelector(".loader");
     if (loadscreen) loadscreen.remove();
 
-    console.log("Fully loaded including images");
+    console.log("All images and content fully loaded");
 }
 
 

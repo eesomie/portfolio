@@ -139,4 +139,33 @@ function createCarousel(jsonFile, parent){
 
 createCarousel("characterConcepts.json", "characters");
 createCarousel("environmentConcepts.json", "environments");
-//guh
+
+
+const objs = document.querySelectorAll('.fallingobj');
+let startTimes = Array.from(objs).map(() => null);
+const amplitude = 4.75;
+const frequency = 0.1; 
+const speed = 8;
+
+function animate(timestamp) {
+    objs.forEach((item, index) => {
+ 
+        if (!startTimes[index] && index%2==0) startTimes[index] = timestamp + Math.random() * 10000; 
+        if (!startTimes[index] && index%2!=0) startTimes[index] = timestamp + 5000 + Math.random() * 10000;
+        
+        const elapsed = (timestamp - startTimes[index]) / 1000; 
+        
+        const x = amplitude * Math.sin(elapsed * Math.PI * 2 * frequency); 
+        const y = elapsed * speed;  
+
+        item.style.transform = `translate(${x}vw, ${y}vh)`; 
+
+        if (y >= 100) {
+            startTimes[index] = timestamp; 
+        }
+    });
+
+    requestAnimationFrame(animate);
+}
+
+requestAnimationFrame(animate);

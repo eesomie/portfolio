@@ -258,3 +258,22 @@ h2{
 #link a:visited{
     color: #ffabd5;
 }
+
+.overlay{
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 50;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    align-content: center;
+}
+.trail{
+    display: flex;
+    justify-content: center;
+    width: 10vw;
+    height: 100vh;
+}

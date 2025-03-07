@@ -19,7 +19,7 @@ fetch("assets.json")
         const border = document.createElement("a");
         border.href="view.html?img="+item;
         border.classList.add("border");
-        const imgFile = "Assets/Thumbnails/"+item;
+        const imgFile = "Assets/Art/"+item;
         const newImg = document.createElement("img");
         newImg.setAttribute("src", imgFile);
         newImg.setAttribute("alt", imgFile);
@@ -55,8 +55,8 @@ function createCarousel(jsonFile, parent){
             imgArray=[];
             data.forEach((item)=>{
                 creatNewImg = document.createElement("img");
-                creatNewImg.setAttribute("src", "Assets/Thumbnails/"+item);
-                creatNewImg.setAttribute("alt", "Assets/Thumbnails/"+item);
+                creatNewImg.setAttribute("src", "Assets/Art/"+item);
+                creatNewImg.setAttribute("alt", "Assets/Art/"+item);
                 imgArray.push(creatNewImg);
             });
     

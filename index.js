@@ -1,15 +1,3 @@
-function removeLoader() {
-    const header = document.querySelector(".loading");
-    if (header) header.classList.remove("loading");
-
-    const loadscreen = document.querySelector(".loader");
-    if (loadscreen) loadscreen.remove();
-
-    console.log("Images and content fully rendered");
-}
-
-
-
 fetch("assets.json")
 .then(response=>response.json())
 .then(data=>{

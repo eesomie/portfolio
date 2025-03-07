@@ -227,6 +227,7 @@ h2{
 }
 #link{
     display: flex;
+    position: absolute;
     justify-content: center;
     align-items: center;
     color: #ffabd5;
@@ -234,10 +235,15 @@ h2{
     font-size: xx-large;
     font-weight: bolder;
     padding: 15px;
+    top: 0;
+    left: 0;
+    transform: translate(-55px, 180px);
+    border-radius: 15px;
     text-decoration: none;
 }
 #link a:visited{
     color: #ffabd5;
+    text-decoration: none;
 }
 
 .overlay{

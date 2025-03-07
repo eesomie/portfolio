@@ -129,15 +129,15 @@ createCarousel("characterConcepts.json", "characters");
 createCarousel("environmentConcepts.json", "environments");
 
 
-const objs = document.querySelectorAll('.fallingobj');
-let startTimes = Array.from(objs).map(() => null);
-const amplitude = 4.75;
-const frequency = 0.1; 
-const speed = 8;
+    const objs = document.querySelectorAll('.fallingobj');
+    let startTimes = Array.from(objs).map(() => null);
+    const amplitude = 4.75;
+    const frequency = 0.1; 
+    const speed = 8;
 
 function animate(timestamp) {
     objs.forEach((item, index) => {
- 
+
         if (!startTimes[index] && index%2==0) startTimes[index] = timestamp + Math.random() * 10000; 
         if (!startTimes[index] && index%2!=0) startTimes[index] = timestamp + 5000 + Math.random() * 10000;
         
@@ -157,3 +157,4 @@ function animate(timestamp) {
 }
 
 requestAnimationFrame(animate);
+

@@ -1,15 +1,3 @@
-function removeLoader() {
-    const header = document.querySelector(".loading");
-    if (header) header.classList.remove("loading");
-
-    const loadscreen = document.querySelector(".loader");
-    if (loadscreen) loadscreen.remove();
-
-    console.log("Images and content fully rendered");
-}
-
-
-
 fetch("assets.json")
 .then(response=>response.json())
 .then(data=>{
@@ -19,7 +7,7 @@ fetch("assets.json")
         const border = document.createElement("a");
         border.href="view.html?img="+item;
         border.classList.add("border");
-        const imgFile = "Assets/Art/"+item;
+        const imgFile = "Assets/Thumbnails/"+item;
         const newImg = document.createElement("img");
         newImg.setAttribute("src", imgFile);
         newImg.setAttribute("alt", imgFile);
@@ -55,8 +43,8 @@ function createCarousel(jsonFile, parent){
             imgArray=[];
             data.forEach((item)=>{
                 creatNewImg = document.createElement("img");
-                creatNewImg.setAttribute("src", "Assets/Art/"+item);
-                creatNewImg.setAttribute("alt", "Assets/Art/"+item);
+                creatNewImg.setAttribute("src", "Assets/Thumbnails/"+item);
+                creatNewImg.setAttribute("alt", "Assets/Thumbnails/"+item);
                 imgArray.push(creatNewImg);
             });
     

@@ -127,6 +127,7 @@ function createCarousel(jsonFile, parent){
 
 createCarousel("characterConcepts.json", "characters");
 createCarousel("environmentConcepts.json", "environments");
+createCarousel("commissions.json", "commissions")
 
 
     const objs = document.querySelectorAll('.fallingobj');

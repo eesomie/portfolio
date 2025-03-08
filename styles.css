@@ -34,6 +34,7 @@ h2{
     margin: 0;
     padding-left: 75px;
     font-family: 'Courier New', Courier, monospace;
+    font-size: 35px;
 }
 #links {
     position: absolute;
@@ -283,4 +284,8 @@ h2{
 }
 .banner .border:hover{
     transform: scale(100%);
+}
+
+#commissions{
+    background-color: #d16290;
 }
